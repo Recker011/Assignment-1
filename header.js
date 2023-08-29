@@ -3,18 +3,20 @@ import React from 'react';
 function Header() {
     return (
         <header>
-            <i className="fas fa-cloud logo-icon"></i>
-            <h1>Decentralized Trading Platform</h1>
+            <div className="logo">YourLogo</div>
             <nav>
-                <ul>
-                    <li><a href="/home" title="Home"><i className="material-icons">home</i></a></li>
-                    <li><a href="/assets" title="Assets"><i className="material-icons">widgets</i></a></li>
-                    <li><a href="/trading" title="Trading"><i className="material-icons">swap_horiz</i></a></li>
-                    <li><a href="/account" title="Account"><i className="material-icons">account_circle</i></a></li>
-                </ul>
+                <a href="/browse-assets" title="Browse Assets"><i className="material-icons">view_list</i></a>
+                <a href="/trading-platform" title="Trading Platform"><i className="material-icons">swap_horiz</i></a>
+                <a href="/transaction-history" title="Transaction History"><i className="material-icons">history</i></a>
+                <a href="/smart-contracts" title="Smart Contracts"><i className="material-icons">smart_toy</i></a>
+                <a href="/profile" title="Profile"><i className="material-icons">account_circle</i></a>
             </nav>
+            <button className="sign-in-btn">Sign In</button>
+            <button className="sign-up-btn">Sign Up</button>
         </header>
     );
 }
+
+
 
 export default Header;

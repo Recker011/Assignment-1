@@ -1,20 +1,21 @@
 import React from 'react';
 import Header from './header';
+import HeroSection from './HeroSection';
+import AssetShowcase from './AssetShowcase';
+import HowItWorks from './HowItWorks';
+import SearchFilterSection from './SearchFilterSection';
+import Testimonials from './Testimonials';
 import Footer from './Footer';
 
 function HomePage() {
     return (
-        <div>
+        <div className="container">
             <Header />
-            <main>
-                <div className="breadcrumb">
-                    <span>Home</span>
-                    <span>/</span>
-                    <span>Dashboard</span>
-                </div>
-                <h2>Welcome to the Decentralized Trading Platform</h2>
-                <p>Explore the vast world of decentralized trading...</p>
-            </main>
+            <HeroSection />
+            <AssetShowcase />
+            <HowItWorks />
+            <SearchFilterSection />
+            <Testimonials />
             <Footer />
         </div>
     );

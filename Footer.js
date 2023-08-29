@@ -3,13 +3,14 @@ import React from 'react';
 function Footer() {
     return (
         <footer>
-            <div>
-                <a href="/help-support">Help & Support</a> | 
-                <a href="/legal">Legal</a>
-            </div>
-            <p>© 2023 Decentralized Trading Platform</p>
+            <p>&copy; 2023 Your Trading Platform Name</p>
+            <a href="/about">About</a>
+            <a href="/faq">FAQ</a>
+            <a href="/support">Support</a>
+            <a href="/legal">Legal</a>
         </footer>
     );
 }
+
 
 export default Footer;

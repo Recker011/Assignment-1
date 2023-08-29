@@ -4,6 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4; /* light background for the entire page */
 }
 
 header {
@@ -13,80 +14,134 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: url('https://via.placeholder.com/1920x1080'); /* CDN link for background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.5rem;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-}
-
-header nav li {
-    cursor: pointer;
+nav a {
+    margin: 0 15px;
+    font-size: 24px;  /* Icon size */
+    color: blue;
     transition: color 0.3s;
+    position: relative;
 }
 
-header nav li:hover {
+nav a:hover {
     color: white;
 }
 
-.logo-icon {
-    font-size: 2rem;
-    color: blue;
-    margin-right: 15px;
-}
-
-header nav ul li a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Tooltip styling for the title attribute */
-header nav li a:hover::after {
+nav a:hover::after {
     content: attr(title);
-    background-color: black;
-    color: blue;
-    padding: 5px 10px;
     position: absolute;
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    white-space: nowrap;
-    font-size: 0.8rem;
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 5px;
+    font-size: 14px;
+    white-space: nowrap;
     pointer-events: none;
 }
 
-main {
+.sign-in-btn, .sign-up-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.sign-in-btn {
+    background-color: blue;
+    color: white;
+}
+
+.sign-up-btn {
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Asset Showcase */
+.asset-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
 }
 
+.asset-item {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.asset-item:hover {
+    transform: scale(1.05);
+}
+
+/* How It Works */
+.how-it-works {
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+/* Search & Filter Section */
+.search-filter {
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.testimonial-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Footer */
 footer {
     background-color: black;
     color: blue;
-    padding: 10px 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
     text-align: center;
 }
 
 footer a {
     color: blue;
     margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: white;
 }

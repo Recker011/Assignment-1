@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: blue;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+header nav li:hover {
+    color: white;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: blue;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Tooltip styling for the title attribute */
+header nav li a:hover::after {
+    content: attr(title);
+    background-color: black;
+    color: blue;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    pointer-events: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: black;
+    color: blue;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: blue;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
